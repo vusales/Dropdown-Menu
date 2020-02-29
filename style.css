@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+    display: flex;
+}
+.container{
+    width: 100%;
+    background-color: #1c571a;     
+    height:60px;                  
+    display: flex;                  
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid #3cc23a;
+}
+.container ul li {
+    width: 150px;
+    height: 50px;
+    background-color: #1c571a;
+    line-height: 50px;
+    border: 1px solid  #3cc23a;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 30px;
+}
+.container ul li:hover{
+   background-color:#54f542; 
+}
+.myNoneUl {
+    display: none !important;     /*only dont show ul*/
+}
+.myLi:hover .myNoneUl , .subLi:hover .subUl {
+    display: block !important;           /* only show ul */
+   transition: .3s ease;
+}
+.subLi {
+    position: relative;
+}
+.subUl {
+    display: none;
+    position: absolute;
+    top: 0;
+    margin-left: 150px;
+}
+
+@media screen and (max-width:900px){
+.container ul li{
+   margin-right:20px;
+   width: 101px;
+   font-size: 17px;
+   line-height: 50px;
+}
+.subUl {
+    margin-left:100px !important;
+}
+.mob{
+    line-height: normal !important;
+    padding-top: 3px;
+}
+}
+@media screen and (max-width:610px){
+    .container ul li {
+        margin: 0 !important;
+    }
+
+}
+.ContainerDiv {
+    height: 500px;
+    width: 100%;
+    background-image: url(img/img.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.ContainerDiv div {
+    height: 100px;
+    width: 680px;
+    display: flex;
+    background-color:hsla(147, 100%, 78%, 0.68);
+    mix-blend-mode: screen;
+}
+p {
+    font-size: 70px;
+    font-weight: bold;
+    margin: auto;   
+}
+@media screen and (max-width:904px){
+    p {
+        font-size: 60px;
+    }
+}
